@@ -3,6 +3,7 @@ import imgChicken from './assets/imgChicken.svg';
 import imgBurger from './assets/imgBurger.svg';
 import imgHotDog from './assets/imgHotDog.svg';
 import imgFish from './assets/imgFish.svg';
+import imgFries from './assets/imgFries.svg'
 
 const itemCard = (name, price, image) => {
 	const itemCard = document.createElement('div');
@@ -17,6 +18,7 @@ const itemCard = (name, price, image) => {
 	itemImg.src = image;
 
 	const itemPrice = document.createElement('span');
+	itemPrice.classList.add('itemPrice');
 	itemPrice.innerText = `$${price}`;
 
 	const itemElements = [itemName, itemImg, itemPrice];
@@ -28,10 +30,6 @@ const itemCard = (name, price, image) => {
 export const menuPage = (() => {
 	const menu = document.createElement('section');
 	menu.id = 'menu';
-
-	const footer = document.createElement('footer');
-	footer.id = 'menuFooter';
-	footer.innerText = 'All orders come with large fries.';
 
 	const menuItems = {
 		pizza: {
@@ -59,14 +57,17 @@ export const menuPage = (() => {
 			price: '11.99',
 			img: imgFish,
 		},
+		fries: {
+			name: 'Demo Fries',
+			price: '4.99',
+			img: imgFries,
+		},
 	};
 
 	Object.values(menuItems).forEach(item => {
 		const menuItem = itemCard(item.name, item.price, item.img);
 		menu.appendChild(menuItem);
 	});
-
-	menu.appendChild(footer);
 
 	return menu;
 });

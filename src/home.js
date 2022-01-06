@@ -12,7 +12,7 @@ export const homePage = (() => {
 	// restaurant hours
 	const restaurantHours = document.createElement('span');
 	restaurantHours.id = 'restaurantHours';
-	restaurantHours.innerText = 'Open Weekdays | 5am - 11pm';
+	restaurantHours.innerText = 'Open Weekdays \n 5am - 11pm';
 
 	// waiter img
 	const waiterImg = new Image();

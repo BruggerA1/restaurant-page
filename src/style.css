@@ -1,0 +1,243 @@
+@font-face {
+	font-family: 'pacifico';
+	src: url('./assets/Pacifico-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'quicksand';
+	font-weight: 700;
+	src: url('./assets/Quicksand-VariableFont_wght.ttf');
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+
+	display: grid;
+	grid-template-rows: 5vh 1fr;
+
+	background-image: url(./assets/imgRestaurant.png);
+	background-position:top;
+	background-repeat: no-repeat;
+
+	color: #FFF;
+}
+
+body::-webkit-scrollbar {
+	display: none;
+}
+
+a {
+	text-decoration: none;
+	color: #FFF;
+	font-size: 16pt;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+
+	font-family: 'pacifico';
+
+	border-bottom: solid 2px #FFF;
+
+	background-color: rgba(0,0,0,0.6);
+}
+
+#home {
+	height: 85vh;
+	width: 70vw;
+	margin: 5vh 15vw;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+
+	background-color: rgba(0,0,0,0.6);
+
+	border-radius: 25px;
+}
+
+#restaurantName {
+	font-family: 'pacifico';
+	font-size: 48pt;
+}
+
+#restaurantHours {
+	font-family: 'quicksand';
+	font-size: 20pt;
+	text-align: center;
+	filter: drop-shadow(0px 1px 20px #000);
+}
+
+#orderBtn {
+	height: 6vh;
+	width: 12vw;
+
+	font-family: 'pacifico';
+	font-size: 14pt;
+
+	border: none;
+	border-radius: 24px;
+
+	filter: drop-shadow(0px 3px 1px #000);
+	cursor: pointer;
+}
+
+#waiterImg {
+	height: 25vmax;
+	width: 35vmax;
+
+	border: solid 2px #FFF;
+	border-radius: 16px;
+
+	filter: drop-shadow(1px 1px 10px #000);
+
+}
+
+#menu {
+	width: 70vw;
+	margin: 5vh 15vw;
+
+	background-color: rgba(0,0,0,0.6);
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+
+	border-radius: 25px;
+
+}
+
+.menuItem {
+	height: 30vmin;
+	width: 30vmin;
+
+	margin: 2vmin;
+
+	display: grid;
+	grid-template-rows: 2fr 6fr 2fr;
+
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+
+	justify-self: center;
+
+
+	background-color: rgba(0,0,0,0.6);
+	border: white 2px solid;
+	border-radius: 16px;
+}
+
+.itemImg {
+	justify-self: center;
+	height: 15vmin;
+	width: 15vmin;
+}
+
+.itemName {
+	font-family: 'pacifico';
+	font-size: 24pt;
+}
+
+.itemPrice {
+	font-family: 'quicksand';
+	font-size: 20pt;
+}
+
+
+#contact {
+	height: 85vh;
+	width: 70vw;
+	margin: 5vh 15vw;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+
+	background-color: rgba(0,0,0,0.6);
+
+	border-radius: 25px;
+}
+
+#contactTitle {
+	font-family: 'pacifico';
+	font-size: 64pt;
+}
+
+#phoneNumber {
+	font-family: 'quicksand';
+	font-size: 24pt;
+}
+
+#mapFrame {
+	height: 400px;
+	width: 400px;
+	filter: drop-shadow(1px 1px 10px #000);
+	border: solid 4px #000;
+	border-radius: 25px;
+}
+
+@media screen and (max-width: 700px) {
+	#home {
+		height: 90vh;
+		width: 90vw;
+		margin: 2.5vh 5vw;	
+	}
+
+	#menu {
+		width: 90vw;
+		margin: 5vw 5vw;
+		grid-template-columns: none;
+	}
+
+	#restaurantName {
+		font-size: 32pt;
+		text-align: center;
+		width: 60vw;
+	}
+
+	#restaurantHours {
+		font-size: 18pt;
+		text-align: center;
+	}
+
+	#orderBtn {
+		width: 30vw;
+		font-size: 14pt;
+	}
+
+	#waiterImg {
+		height: 35vmax;
+		width: 35vmax;
+	}
+
+	.menuItem {
+		margin: 2vmax;
+		height: 50vmin;
+		width: 60vmin;
+	}
+
+	.itemImg {
+		justify-self: center;
+		height: 25vmin;
+		width: 25vmin;
+	}
+
+	.itemName {
+		font-size: 24pt;
+	}
+
+	.itemPrice {
+		font-size: 18pt;
+	}
+
+}
